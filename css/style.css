@@ -1,0 +1,18 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;color:#222;background:#f7f7f7}
+.navbar{height:65px;background:#111827;color:white;display:flex;align-items:center;padding:0 7%;justify-content:space-between}
+.logo{font-size:24px;font-weight:bold}.logo span{color:#38bdf8}
+.menu{display:flex;gap:22px}.menu a{color:white;text-decoration:none;font-size:15px}.menu a:hover{color:#38bdf8}
+.banner{height:430px;background:linear-gradient(#0008,#0008),url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1400&q=80') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
+.banner h1{font-size:55px}.banner p{font-size:20px;margin:10px 0 25px}
+.container{width:90%;max-width:1100px;margin:40px auto}.container>h2{text-align:center;margin-bottom:25px}
+.button{display:inline-block;background:#0ea5e9;color:white;text-decoration:none;padding:10px 20px;border-radius:6px;border:0;margin-top:8px}.button:hover{background:#0284c7}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.card{background:white;padding:15px;border-radius:8px;text-align:center;box-shadow:0 2px 8px #0001}.card img{width:100%;height:230px;object-fit:cover;border-radius:6px}.card h3{margin:12px 0 5px}.card p,.price{color:#0ea5e9;font-weight:bold;font-size:18px}.card del{color:#888}
+.page h1{text-align:center;margin-bottom:30px}
+.detail,.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:white;padding:25px;border-radius:8px}.detail img,.about img{width:100%;height:400px;object-fit:cover;border-radius:6px}
+.detail h2,.about h2{margin-bottom:15px}.detail p,.about p{margin:10px 0;color:#555}
+.cart{background:white;padding:30px;border-radius:8px;max-width:600px;margin:auto}.cart hr{margin:20px 0;border:0;border-top:1px solid #ddd}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:white;padding:25px;border-radius:8px}.stars{color:#f59e0b!important}
+footer{text-align:center;background:#111827;color:white;padding:25px;margin-top:60px}
+@media(max-width:750px){.navbar{height:auto;padding:15px;display:block;text-align:center}.menu{flex-wrap:wrap;justify-content:center;margin-top:12px;gap:12px}.banner h1{font-size:38px}.products,.reviews,.detail,.about{grid-template-columns:1fr}.detail img,.about img{height:280px}}

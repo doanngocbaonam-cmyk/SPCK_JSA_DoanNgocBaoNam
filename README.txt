@@ -1,0 +1,1 @@
+SportZone bản cơ bản: chỉ HTML + CSS, có navbar, button, card, hình ảnh và responsive. Không JavaScript, Firebase, React, Node.js, Admin hay đăng nhập.

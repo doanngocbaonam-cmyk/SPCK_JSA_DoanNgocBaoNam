@@ -1,0 +1,191 @@
+
+/* ============================= */
+/* LOGIN & REGISTER - SPORTZONE   */
+/* ============================= */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #142b45,
+        #203e5c,
+        #294e6b
+    );
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* KHUNG ĐĂNG NHẬP / ĐĂNG KÝ */
+
+.auth-box {
+    width: 100%;
+    max-width: 420px;
+    background: #e8eff5;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(10, 30, 50, 0.3);
+    box-sizing: border-box;
+}
+
+/* LOGO */
+
+.auth-box h1 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0 0 25px;
+    padding: 15px;
+    background: #294e6b;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.auth-box h1 span {
+    color: #65b7f3;
+}
+
+/* TIÊU ĐỀ */
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #203e5c;
+    font-size: 25px;
+}
+
+.auth-desc {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* FORM */
+
+.auth-box form label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+    color: #294e6b;
+    font-size: 14px;
+}
+
+.auth-box form input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #c5d3df;
+    border-radius: 8px;
+    outline: none;
+    background: #f7fafd;
+    color: #203e5c;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.auth-box form input:focus {
+    border-color: #348ac7;
+    box-shadow: 0 0 5px rgba(52, 138, 199, 0.2);
+}
+
+/* GHI NHỚ VÀ QUÊN MẬT KHẨU */
+
+.auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.auth-options a {
+    color: #0875d1;
+    text-decoration: none;
+}
+
+.auth-options a:hover {
+    text-decoration: underline;
+}
+
+.remember {
+    display: flex !important;
+    align-items: center;
+    gap: 5px;
+    margin: 0 !important;
+    font-weight: normal !important;
+}
+
+/* NÚT ĐĂNG NHẬP / ĐĂNG KÝ */
+
+.auth-button {
+    width: 100%;
+    padding: 14px;
+    background: #0875d1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.auth-button:hover {
+    background: #065da8;
+    transform: translateY(-2px);
+}
+
+/* CHUYỂN ĐỔI LOGIN / REGISTER */
+
+.auth-switch {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    color: #536779;
+}
+
+.auth-switch a {
+    color: #0875d1;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* QUAY VỀ TRANG CHỦ */
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #64788a;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: #0875d1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 15px;
+    }
+
+    .auth-box {
+        padding: 25px;
+    }
+
+    .auth-box h1 {
+        font-size: 25px;
+    }
+}
