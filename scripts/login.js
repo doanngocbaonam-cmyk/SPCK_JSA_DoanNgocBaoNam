@@ -15,6 +15,7 @@ form.addEventListener("submit", (e) => {
 
     let email = document.getElementById("email");
     let password = document.getElementById("password");
+    
 
     let existingUser = users.find(
       (index) =>
@@ -25,9 +26,9 @@ form.addEventListener("submit", (e) => {
     if (existingUser) {
       localStorage.setItem("currentUser", JSON.stringify(existingUser));
 
-      location.href = "/index.html";
+      location.href = "./index.html";
     } else {
       alert("Email or password is incorrect");
     }
-  }
+  } 
 });

@@ -16,3 +16,152 @@ body{font-family:Arial,sans-serif;color:#222;background:#f7f7f7}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:white;padding:25px;border-radius:8px}.stars{color:#f59e0b!important}
 footer{text-align:center;background:#111827;color:white;padding:25px;margin-top:60px}
 @media(max-width:750px){.navbar{height:auto;padding:15px;display:block;text-align:center}.menu{flex-wrap:wrap;justify-content:center;margin-top:12px;gap:12px}.banner h1{font-size:38px}.products,.reviews,.detail,.about{grid-template-columns:1fr}.detail img,.about img{height:280px}}
+
+/* TÀI KHOẢN */
+.account-area {
+    position: relative;
+}
+
+.account-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    width: 240px;
+    background: #172b42;
+    border: 1px solid #29445f;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 9999;
+    box-shadow: 0 5px 20px #0005;
+}
+
+.account-dropdown.show {
+    display: block;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.dropdown-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.account-info p {
+    color: #aabbd0;
+    font-size: 12px;
+    margin-top: 5px;
+    word-break: break-all;
+}
+
+.account-dropdown hr {
+    border: 0;
+    border-top: 1px solid #40536a;
+    margin: 14px 0;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #263f59;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+}
+
+.logout-btn:hover {
+    background: #0ea5e9;
+}
+
+/* Căn đều navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu > a {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.account-area {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.account-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 5px;
+    line-height: 1;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}

@@ -7,16 +7,48 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <nav class="navbar">
-  <div class="logo">SPORT<span>ZONE</span></div>
-  <div class="menu">
-    <a href="index.html">Trang chủ</a>
-    <a href="detail.html">Sản phẩm</a>
-    <a href="cart.html">Giỏ hàng</a>
-    <a href="introduce.html">Giới thiệu</a>
-    <a href="sale.html">Giảm giá</a>
-  </div>
+    <div class="logo">
+        SPORT<span>ZONE</span>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">Trang chủ</a>
+        <a href="detail.html">Sản phẩm</a>
+        <a href="cart.html">Giỏ hàng</a>
+        <a href="introduce.html">Giới thiệu</a>
+        <a href="sale.html">Giảm giá</a>
+
+        <!-- Tài khoản -->
+        <div class="account-area" id="accountArea">
+
+            <button class="account-btn" id="accountBtn" type="button">
+                <span class="user-icon">👤</span>
+                <span id="accountLabel">Tài khoản</span>
+            </button>
+
+            <div class="account-dropdown" id="accountDropdown">
+                <div class="account-info">
+                    <div class="dropdown-avatar" id="dropdownAvatar">N</div>
+
+                    <div>
+                        <strong id="dropdownName">Tài khoản</strong>
+                        <p id="dropdownEmail"></p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <button type="button" id="logoutBtn" class="logout-btn">
+                    Đăng xuất
+                </button>
+            </div>
+
+        </div>
+    </div>
 </nav>
+
 <section class="container page">
 <h1>Giỏ hàng</h1>
 <div class="cart">
@@ -24,5 +56,6 @@
 </div>
 </section>
 <footer>© 2026 SportZone - Website bán đồ thể thao</footer>
+<script src="./scripts/account.js"></script>
 </body>
 </html>
