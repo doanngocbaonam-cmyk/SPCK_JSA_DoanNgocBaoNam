@@ -1,0 +1,74 @@
+﻿THẦY NOTE LẠI MỘT SỐ CHỖ TRONG BÀI SPORTZONE
+
+Thầy đã chỉnh lại giao diện và nối API cho trang danh sách, trang chi tiết. Em mở bài bằng Live Server rồi chạy thử từ trang chủ qua sản phẩm, xem chi tiết và thêm vào giỏ nhé.
+
+API đang dùng là DummyJSON, danh mục sports-accessories, không cần key. Danh mục này có dụng cụ và phụ kiện thể thao nên thầy đã đổi các sản phẩm giày, áo viết sẵn trước đó. Giá đang để USD theo dữ liệu API. Đây là dữ liệu mẫu để thực hành.
+
+Những chỗ thầy đã sửa
+
+- index.html: chỉnh banner, menu và các thẻ sản phẩm. Sản phẩm nổi bật được lấy từ API. Phần nhận xét khách hàng vẫn là nội dung minh họa.
+
+- products.html: tạo trang danh sách riêng, có tìm tên và sắp xếp giá. Trước đó em dùng detail.html làm danh sách nên hơi khó phân biệt.
+
+- detail.html: chuyển thành trang chi tiết dùng chung. Bấm sản phẩm nào thì URL nhận ID của sản phẩm đó, rồi gọi API lấy ảnh, tên, mô tả, giá và các thông tin liên quan. Có tăng giảm số lượng, thêm giỏ và báo lỗi khi ID không đúng.
+
+- detail0.html đến detail4.html: thầy đã bỏ vì không cần mỗi sản phẩm một file nữa. Sau này thêm sản phẩm cũng dùng detail.html?id=... như hiện tại.
+
+- sale.html: lấy cùng nguồn API với danh sách, lọc theo thông tin ưu đãi của nguồn. Giá vẫn hiển thị theo API, chưa tự tính giảm thêm.
+
+- cart.html: đã có sản phẩm thực sự từ giỏ lưu trong localStorage. Em đổi số lượng hoặc xóa thì tạm tính và số trên biểu tượng giỏ sẽ cập nhật. Chưa có bước nhập thông tin nhận hàng và thanh toán.
+
+- css/style.css: chỉnh lại card, ảnh và khoảng cách. Trang chi tiết chia hai cột trên máy tính, xuống một cột trên điện thoại. Form đăng nhập/đăng ký vẫn giữ khung gọn trong style1.css.
+
+- scripts/account.js: giữ cách em làm menu tài khoản, thêm xử lý khi dữ liệu lưu bị lỗi và đóng menu bằng phím Escape.
+
+- login.html, register.html: sửa label, thêm autocomplete, bỏ dấu ``` đang hiện ra ở trang đăng ký. Thầy cũng bỏ Ghi nhớ/Quên mật khẩu vì hai mục đó chưa có chức năng.
+
+- introduce.html: sửa lại phần giới thiệu cho khớp với danh mục sản phẩm đang dùng.
+
+Các file JS em nên đọc theo thứ tự
+
+1. scripts/config.js
+   Chứa địa chỉ API, danh mục, đơn vị tiền và tên key lưu giỏ. Cần đổi cấu hình thì sửa ở đây trước.
+
+2. scripts/api.js
+   Có hàm lấy danh sách và lấy một sản phẩm theo ID. Em chú ý: danh sách nằm trong data.products, còn chi tiết trả thẳng một object sản phẩm.
+
+3. scripts/ui.js
+   Các hàm dùng lại để tạo card, định dạng giá, hiện ảnh và thông báo lỗi.
+
+4. scripts/products.js
+   Lấy danh sách rồi render, tìm kiếm và sắp xếp. File này dùng cho cả trang sản phẩm và trang ưu đãi.
+
+5. scripts/detail.js
+   Đọc ID trên URL, gọi API và đưa dữ liệu lên trang chi tiết. Em đọc kỹ phần này vì đây là mẫu để làm các trang có dữ liệu thay đổi theo ID.
+
+6. scripts/cart-store.js và scripts/cart.js
+   Một file đọc/ghi giỏ vào localStorage, một file hiển thị giỏ. Giỏ chỉ lưu ID và số lượng; tên, ảnh và giá được lấy lại từ API.
+
+7. scripts/home.js
+   Lấy một vài sản phẩm từ cùng API để hiện ở trang chủ.
+
+Trong code thầy có comment từng bước. Nếu cần xem kỹ hơn thì đọc thêm HUONG_DAN_BAT_DAU.md. File images/product-placeholder.svg là ảnh thay thế khi ảnh sản phẩm bị thiếu hoặc không tải được.
+
+Phần em làm tiếp
+
+[ ] Chạy thử một lượt: trang chủ -> danh sách -> chi tiết -> chọn số lượng -> giỏ. Thử cả tăng, giảm, xóa và tải lại trang xem giỏ còn không.
+
+[ ] Tự chỉ ra được đoạn nào gọi API, đoạn nào nhận dữ liệu và đoạn nào render lên HTML. Không chỉ chạy được mà cần hiểu để trình bày lại.
+
+[ ] Thêm sản phẩm liên quan ở cuối trang chi tiết. Dùng lại API và hàm tạo card, nhớ bỏ sản phẩm đang xem khỏi danh sách liên quan.
+
+[ ] Rà lại scripts/login.js và scripts/register.js. Email nên trim và chuyển về chữ thường trước khi kiểm tra trùng. Đọc localStorage cần có try/catch và kiểm tra dữ liệu có đúng dạng mảng không.
+
+[ ] Đăng ký đang giữ nguyên mật khẩu nhưng đăng nhập lại trim mật khẩu, em cần thống nhất hai chỗ này. Khi lưu currentUser chỉ giữ thông tin cần hiển thị, không chép cả mật khẩu vào đó. Tài khoản hiện chỉ là bài thực hành trên trình duyệt, đừng dùng mật khẩu thật.
+
+[ ] Làm bước đặt hàng: họ tên, điện thoại, email, địa chỉ. Kiểm tra các trường trước khi xác nhận. Giỏ trống thì không cho đặt; nhập sai thì giữ lại thông tin để người dùng sửa, chưa được xóa giỏ.
+
+[ ] Nếu thêm phí vận chuyển thì tính cho thống nhất. Hiện giỏ mới hiển thị tạm tính tiền sản phẩm.
+
+[ ] review.html đang bị comment toàn bộ. Em xem có cần làm trang này không; không dùng thì bỏ để thư mục đỡ rối.
+
+[ ] Mở thử trên điện thoại hoặc bật chế độ mobile trong F12. Kiểm tra menu, ảnh, form và nút bấm, đồng thời xem Console có báo lỗi không.
+
+Thầy đã kiểm tra API danh sách/chi tiết và thử các luồng tìm kiếm, sắp xếp, thêm giỏ, đổi số lượng, xóa và xử lý ID sai bằng công cụ mô phỏng. Các kiểm tra đó đã chạy qua, nhưng em vẫn cần tự xem giao diện trên trình duyệt và thử lại form tài khoản trước khi nộp.

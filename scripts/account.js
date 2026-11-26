@@ -1,12 +1,19 @@
+// Giữ key currentUser của học sinh; chỉ đọc thông tin công khai để hiển thị menu.
+(() => {
 const accountBtn = document.getElementById("accountBtn");
 const accountDropdown = document.getElementById("accountDropdown");
 const accountLabel = document.getElementById("accountLabel");
 
 const logoutBtn = document.getElementById("logoutBtn");
 
-const currentUser = JSON.parse(
-    localStorage.getItem("currentUser") || "null"
-);
+let currentUser = null;
+try {
+    const value = JSON.parse(localStorage.getItem("currentUser") || "null");
+    if (value && typeof value.username === "string" && typeof value.email === "string") currentUser = value;
+} catch { /* Dữ liệu hỏng: hiển thị như khách, không làm crash trang sản phẩm. */ }
+if (!accountBtn || !accountDropdown || !accountLabel || !logoutBtn) return;
+accountBtn.setAttribute("aria-expanded", "false");
+accountBtn.setAttribute("aria-controls", "accountDropdown");
 
 // Lấy chữ cái đầu tên
 function getInitials(name) {
@@ -47,6 +54,7 @@ accountBtn.addEventListener("click", () => {
     }
 
     accountDropdown.classList.toggle("show");
+    accountBtn.setAttribute("aria-expanded", String(accountDropdown.classList.contains("show")));
 });
 
 // Đăng xuất
@@ -59,5 +67,13 @@ logoutBtn.addEventListener("click", () => {
 document.addEventListener("click", (e) => {
     if (!e.target.closest("#accountArea")) {
         accountDropdown.classList.remove("show");
+        accountBtn.setAttribute("aria-expanded", "false");
     }
 });
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        accountDropdown.classList.remove("show");
+        accountBtn.setAttribute("aria-expanded", "false");
+    }
+});
+})();

@@ -1,63 +1,50 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SportZone</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="SportZone - Dụng cụ và phụ kiện thể thao"><title>Chi tiết sản phẩm | SportZone</title><link rel="stylesheet" href="css/style.css"></head>
+<body ><a class="skip-link" href="#main">Đến nội dung</a>
+<nav class="navbar" aria-label="Điều hướng chính">
+      <a class="logo" href="index.html" aria-label="SportZone - Trang chủ">SPORT<span>ZONE</span></a>
 
-<nav class="navbar">
-    <div class="logo">
-        SPORT<span>ZONE</span>
-    </div>
-
-    <div class="menu">
+      <div class="menu">
         <a href="index.html">Trang chủ</a>
-        <a href="detail.html">Sản phẩm</a>
-        <a href="cart.html">Giỏ hàng</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="cart.html">Giỏ hàng <span class="cart-badge" data-cart-count>0</span></a>
         <a href="introduce.html">Giới thiệu</a>
         <a href="sale.html">Giảm giá</a>
 
-        <!-- Tài khoản -->
+        <!-- Khu vực tài khoản -->
         <div class="account-area" id="accountArea">
+          <button class="account-btn" id="accountBtn" type="button">
+            <span class="user-icon">👤</span>
+            <span id="accountLabel">Tài khoản</span>
+          </button>
 
-            <button class="account-btn" id="accountBtn" type="button">
-                <span class="user-icon">👤</span>
-                <span id="accountLabel">Tài khoản</span>
-            </button>
+          <div class="account-dropdown" id="accountDropdown">
+            <div class="account-info">
+              <div class="dropdown-avatar" id="dropdownAvatar">N</div>
 
-            <div class="account-dropdown" id="accountDropdown">
-                <div class="account-info">
-                    <div class="dropdown-avatar" id="dropdownAvatar">N</div>
-
-                    <div>
-                        <strong id="dropdownName">Tài khoản</strong>
-                        <p id="dropdownEmail"></p>
-                    </div>
-                </div>
-
-                <hr>
-
-                <button type="button" id="logoutBtn" class="logout-btn">
-                    Đăng xuất
-                </button>
+              <div>
+                <strong id="dropdownName">Tài khoản</strong>
+                <p id="dropdownEmail"></p>
+              </div>
             </div>
 
-        </div>
-    </div>
-</nav>
+            <hr />
 
-</section>
-<section class="container">
-  <h2>Sản phẩm</h2>
-  <div class="products">
-    <div class="card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"><h3>Giày thể thao</h3><p>599.000đ</p><a class="button" href="detail0.html">Xem chi tiết</a></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"><h3>Áo thể thao</h3><p>399.000đ</p><a class="button" href="detail1.html">Xem chi tiết</a></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1580086319619-3ed498161c77?auto=format&fit=crop&w=600&q=80"><h3>Bình nước</h3><p>150.000đ</p><a class="button" href="detail2.html">Xem chi tiết</a></div>
-  </div>
-</div>
-</section>
-<script src="./scripts/account.js"></script>
-</body>
+            <button type="button" id="logoutBtn" class="logout-btn">
+              Đăng xuất
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+<main id="main"><div class="container breadcrumb"><a href="products.html">Sản phẩm</a><span aria-hidden="true">/</span><span id="breadcrumb-title">Chi tiết</span></div><section class="container section-space"><div id="product-detail" aria-busy="true">Đang tải thông tin sản phẩm...</div></section>
+<template id="detail-template"><div class="detail-layout"><div class="detail-gallery"><div class="detail-image-box"><img class="detail-image" alt=""></div><div class="detail-thumbnails"></div></div><article class="detail-info"><span class="eyebrow">DỤNG CỤ THỂ THAO</span><h1 class="detail-title"></h1><p class="detail-rating muted"></p><p class="detail-price price"></p><p class="source-note">Giá tham khảo · USD · Sản phẩm demo</p><p class="detail-description"></p><p class="detail-stock stock"></p><form id="add-form"><label for="quantity">Số lượng</label><div class="quantity-control"><button type="button" data-step="-1" aria-label="Giảm số lượng">−</button><input id="quantity" type="number" min="1" step="1" value="1" required inputmode="numeric"><button type="button" data-step="1" aria-label="Tăng số lượng">+</button></div><div class="detail-actions"><button id="add-product" type="submit" class="button">Thêm vào giỏ hàng</button><a class="button secondary" href="cart.html">Xem giỏ hàng</a></div><p id="add-message" role="status" aria-live="polite"></p></form><dl class="product-specs"><div><dt>Thương hiệu</dt><dd class="detail-brand"></dd></div><div><dt>Mã SKU</dt><dd class="detail-sku"></dd></div><div><dt>Bảo hành mẫu</dt><dd class="detail-warranty"></dd></div><div><dt>Thông tin giao hàng nguồn</dt><dd class="detail-shipping"></dd></div></dl></article></div><section class="detail-review-section"><h2>Đánh giá từ dữ liệu nguồn</h2><p class="muted">Đây là các đánh giá mẫu do API cung cấp.</p><div class="detail-reviews reviews"></div></section></template></main>
+<footer><div class="container footer-inner"><div><strong>SPORT<span>ZONE</span></strong><p>Dụng cụ cho mỗi ngày vận động.</p></div><p>Website học tập · Dữ liệu mẫu từ <a href="https://dummyjson.com/docs/products" target="_blank" rel="noopener">DummyJSON</a> · Giá USD</p></div></footer>
+<!-- Đúng thứ tự: cấu hình -> fetch -> UI/giỏ dùng chung -> script trang. -->
+<script src="scripts/config.js" defer></script>
+<script src="scripts/api.js" defer></script>
+<script src="scripts/ui.js" defer></script>
+<script src="scripts/cart-store.js" defer></script>
+<script src="scripts/account.js" defer></script>
+<script src="scripts/detail.js" defer></script>
+</body></html>
