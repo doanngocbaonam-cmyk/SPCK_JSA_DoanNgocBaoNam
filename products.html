@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="SportZone - Dụng cụ và phụ kiện thể thao"><title>Sản phẩm | SportZone</title><link rel="stylesheet" href="css/style.css"></head>
+<body ><a class="skip-link" href="#main">Đến nội dung</a>
+<nav class="navbar" aria-label="Điều hướng chính">
+      <a class="logo" href="index.html" aria-label="SportZone - Trang chủ">SPORT<span>ZONE</span></a>
+
+      <div class="menu">
+        <a href="index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="cart.html">Giỏ hàng <span class="cart-badge" data-cart-count>0</span></a>
+        <a href="introduce.html">Giới thiệu</a>
+        <a href="sale.html">Giảm giá</a>
+
+        <!-- Khu vực tài khoản -->
+        <div class="account-area" id="accountArea">
+          <button class="account-btn" id="accountBtn" type="button">
+            <span class="user-icon">👤</span>
+            <span id="accountLabel">Tài khoản</span>
+          </button>
+
+          <div class="account-dropdown" id="accountDropdown">
+            <div class="account-info">
+              <div class="dropdown-avatar" id="dropdownAvatar">N</div>
+
+              <div>
+                <strong id="dropdownName">Tài khoản</strong>
+                <p id="dropdownEmail"></p>
+              </div>
+            </div>
+
+            <hr />
+
+            <button type="button" id="logoutBtn" class="logout-btn">
+              Đăng xuất
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+<main id="main"><header class="page-heading"><div class="container"><span class="eyebrow">SPORTZONE / DANH MỤC</span><h1>Dụng cụ & phụ kiện thể thao</h1><p>Tìm sản phẩm cho môn thể thao và nhịp vận động của bạn.</p></div></header><section class="container section-space"><div class="catalog-toolbar"><div class="search-field"><label for="product-search">Tìm tên sản phẩm</label><input id="product-search" type="search" maxlength="100" placeholder="Ví dụ: Basketball, Tennis..." disabled></div><div><label for="product-sort">Sắp xếp</label><select id="product-sort" disabled><option value="default">Mặc định</option><option value="low">Giá thấp đến cao</option><option value="high">Giá cao đến thấp</option></select></div></div><p id="product-status" class="muted" role="status" aria-live="polite">Đang chuẩn bị dữ liệu...</p><button id="product-retry" type="button" class="button secondary" hidden>Thử lại</button><div id="product-list" class="products" aria-busy="true"></div><noscript><p class="notice">Hãy bật JavaScript để xem sản phẩm.</p></noscript><p class="source-note">Dữ liệu mẫu từ DummyJSON. Giá tham khảo bằng USD, không phải giá/tồn kho cửa hàng thật.</p></section></main>
+<footer><div class="container footer-inner"><div><strong>SPORT<span>ZONE</span></strong><p>Dụng cụ cho mỗi ngày vận động.</p></div><p>Website học tập · Dữ liệu mẫu từ <a href="https://dummyjson.com/docs/products" target="_blank" rel="noopener">DummyJSON</a> · Giá USD</p></div></footer>
+<!-- Đúng thứ tự: cấu hình -> fetch -> UI/giỏ dùng chung -> script trang. -->
+<script src="scripts/config.js" defer></script>
+<script src="scripts/api.js" defer></script>
+<script src="scripts/ui.js" defer></script>
+<script src="scripts/cart-store.js" defer></script>
+<script src="scripts/account.js" defer></script>
+<script src="scripts/products.js" defer></script>
+</body></html>

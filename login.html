@@ -15,19 +15,14 @@
         <h2>Đăng nhập</h2>
         <p class="auth-desc">Chào mừng bạn quay trở lại!</p>
 
-        <form>
-            <label>Email</label>
-            <input id="email"  type="email" placeholder="Nhập email của bạn" required>
+        <p class="auth-demo-note">Tài khoản demo lưu trên trình duyệt. Không dùng mật khẩu thật.</p><form>
+            <label for="email">Email</label>
+            <input id="email" autocomplete="username" type="email" placeholder="Nhập email của bạn" required>
 
-            <label>Mật khẩu</label>
-            <input id="password" type="password" placeholder="Nhập mật khẩu" required>
+            <label for="password">Mật khẩu</label>
+            <input id="password" autocomplete="current-password" type="password" placeholder="Nhập mật khẩu" required>
 
-            <div class="auth-options">
-                <label class="remember">
-                    <input type="checkbox"> Ghi nhớ tôi
-                </label>
-                <a href="#">Quên mật khẩu?</a>
-            </div>
+            <!-- Ghi nhớ/quên mật khẩu: chỉ thêm khi đã xử lý được luồng. -->
 
             <button type="submit" class="auth-button">
                 Đăng nhập
